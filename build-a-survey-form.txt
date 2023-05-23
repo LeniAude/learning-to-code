@@ -1,0 +1,68 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="styles.css">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/></meta>
+  </head>
+  <body>
+    <h1 id="title">Survey form</h1>
+    <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <form id="survey-form">
+      <label id="name-label">Name: <input placeholder="Type your name" id="name" type="text" required></label>
+      <label id="email-label">E-mail: <input placeholder="Type your e-mail address" id="email" type="email" required></label>
+      <label id="number-label">What's your favorite number? <input placeholder="Number" id="number" type="number" min="12" max="90"></label>
+      <label for="dropdown">What's your favorite food?
+        <select id="dropdown">
+          <option>Choose</option>
+          <option>Mac & Cheese</option>
+          <option>Spaghetti</option>
+          <option>Pizza</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <fieldset>I am currently: </br>
+      <label for="single"><input name="status" type="radio" value="single" id="single">Single</label></br>
+      <label><input name="status" type="radio"value="relation"> In a relationship</label></br>
+      <label><input name="status" type="radio" value="married"> Married</label></br>
+      <label><input name="status" type="radio"value="complicated"> It's complicated</label>
+      </fieldset>
+      <fieldset> Which kind of person are you?</br>
+        <label><input type="checkbox" name="personality" value="cat person" required>I am a cat person</label></br>
+        <label><input type="checkbox" name="personality" value="dog person" required>I am a dog person</label></br>
+        <label><input type="checkbox" name="personality" value="other animal person" required>I love other animals</label></br>
+        <label><input type="checkbox" name="personality" value="hate animal person" required>I hate animals</label>
+      </fieldset>
+      <label name="secret">Tell us a secret: <textarea id ="secret" rows="5" cols="50"></textarea>
+      </label>
+      <label><input id="submit" type="submit"></label>
+    </form>
+
+  </body
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+input, select {
+  display: block;
+  margin: 5px;
+}
+fieldset {
+  margin: 10px auto;
+}
+input[name="status"]{
+  display: inline-block;
+}
+input[name="personality"]{
+  display: inline-block;
+}
+
+
+** end of undefined **
+
