@@ -1,0 +1,30 @@
+function palindrome(str) {
+  let arr = str.split("");
+  let newArr = [];
+  let regex1 = /[a-z0-9]/i;
+//elke karakter afgaan en wanneer alfanumeriek pushen in nieuwe array
+  for (let i = 0; i < arr.length; i++) {
+    let lowerCase = arr[i].toLowerCase();
+    if (regex1.test(lowerCase) === true) {
+      newArr.push(lowerCase);
+    }
+  }
+//palindroom checken: eerste karakter gelijk aan laatste en dan zo verder.
+  let palindroomCheck = true;
+  for (let j = 0; j < newArr.length; j++) {
+    const lengteArr = newArr.length - 1;
+   
+    if (newArr[j] === newArr[lengteArr - j]) {
+      
+    } else {
+      palindroomCheck = false;
+    }
+  }
+ 
+  console.log(arr);
+  console.log(newArr);
+  console.log(palindroomCheck);
+  return palindroomCheck;
+}
+
+palindrome("Eye");
