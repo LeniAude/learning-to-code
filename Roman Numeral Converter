@@ -1,0 +1,42 @@
+//object maken van de data
+let romeinsObject = {
+  M: 1000,
+  CM: 900,
+  D: 500,
+  CD: 400,
+  C: 100,
+  XC: 90,
+  L: 50,
+  XL: 40,
+  X: 10,
+  IX: 9,
+  V: 5,
+  IV: 4,
+  I: 1
+};
+//data eruit halen, een array van de keys en eentje van de waarden
+let keysArr = Object.keys(romeinsObject);
+let valueArr = Object.values(romeinsObject);
+console.log(keysArr);
+console.log(valueArr);
+
+let romeinseArr = [];
+//zolang je de bovenste waarde kan aftrekken en groter dan nul dan doen
+function convertToRoman(num) {
+ let getal = num;
+ romeinseArr = [];
+ for (let i = 0; i < valueArr.length; i++) {
+   while (getal - valueArr[i] >= 0) {
+     romeinseArr.push(keysArr[i]);
+     getal -= valueArr[i];
+   }
+ }
+ console.log(romeinseArr);
+//array naar string
+const romeinseStr = romeinseArr.join("");
+console.log(romeinseStr);
+
+ return romeinseStr;
+}
+
+convertToRoman(5);
